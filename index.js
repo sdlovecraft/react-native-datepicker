@@ -204,6 +204,7 @@ class DatePicker extends Component {
       // 选日期
       if (mode === 'date') {
         DatePickerAndroid.open({
+          mode: 'spinner',
           date: this.state.date,
           minDate: minDate && this.getDate(minDate),
           maxDate: maxDate && this.getDate(maxDate)
@@ -223,6 +224,7 @@ class DatePicker extends Component {
 
         DatePickerAndroid.open({
           date: this.state.date,
+          mode: 'spinner',
           minDate: minDate && this.getDate(minDate),
           maxDate: maxDate && this.getDate(maxDate)
         }).then(this.onDatetimePicked);
